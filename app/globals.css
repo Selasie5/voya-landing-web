@@ -1,26 +1,53 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-sans: var(--font-season);
+  --color-burnt-orange: #E85412;
+  --color-loader-peach: #FFA85C;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+.font-season-sans {
+  font-family: var(--font-season), sans-serif;
+  font-variation-settings: "SERF" 0;
+}
+
+.font-season-mix {
+  font-family: var(--font-season), sans-serif;
+  font-variation-settings: "SERF" 50;
+}
+
+.mesh-gradient {
+  background-color: rgb(56 9 2);
+  background-image:
+    radial-gradient(circle at 68% 38%, rgb(255 168 92 / 0.98) 0%, rgb(255 168 92 / 0.58) 16%, transparent 38%),
+    radial-gradient(ellipse at 18% 18%, rgb(255 77 6 / 0.95) 0%, rgb(255 77 6 / 0.42) 32%, transparent 58%),
+    radial-gradient(ellipse at 86% 88%, rgb(102 22 4 / 0.96) 0%, transparent 54%),
+    conic-gradient(from 214deg at 46% 52%, rgb(56 9 2), rgb(181 43 4), rgb(255 77 6), rgb(255 168 92), rgb(132 27 3), rgb(56 9 2));
+  background-size: 115% 115%, 125% 125%, 120% 120%, 145% 145%;
+  animation: mesh-drift 7s ease-in-out infinite alternate;
+}
+
+.mesh-gradient::after {
+  position: absolute;
+  inset: 0;
+  content: "";
+  pointer-events: none;
+  opacity: 0.13;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.55'/%3E%3C/svg%3E");
+  mix-blend-mode: soft-light;
+}
+
+@keyframes mesh-drift {
+  from {
+    background-position: 0% 0%, 0% 0%, 0% 0%, 44% 48%;
+  }
+  to {
+    background-position: 3% -2%, -3% 2%, 2% 3%, 50% 54%;
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+@media (prefers-reduced-motion: reduce) {
+  .mesh-gradient {
+    animation: none;
+  }
 }
