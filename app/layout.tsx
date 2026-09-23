@@ -2,6 +2,7 @@ import { ClerkProvider } from "@clerk/nextjs";
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
+import { Analytics } from "@vercel/analytics/next"
 
 const season = localFont({
   src: "../public/SeasonCollectionVF-TRIAL.ttf",
@@ -24,6 +25,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${season.variable} h-full antialiased`}>
       <body className="min-h-full flex flex-col font-season-sans">
+        <Analytics />
         <ClerkProvider waitlistUrl="/">{children}</ClerkProvider>
       </body>
     </html>
