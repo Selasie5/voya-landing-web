@@ -1,6 +1,7 @@
 import { Island } from "@phosphor-icons/react/dist/ssr";
 import { AnimatedHeroText } from "@/components/animated-hero-text";
 import { LoadingScreen } from "@/components/loading-screen";
+import { WaitlistForm } from "@/components/waitlist-form";
 
 export default function Home() {
   const currentYear = new Date().getFullYear();
@@ -28,31 +29,7 @@ export default function Home() {
         <section className="flex flex-1 items-center px-6 py-8 md:px-12 md:py-12">
           <div className="w-full max-w-4xl">
             <AnimatedHeroText />
-
-            <div
-              className="mt-8 flex w-full max-w-xl flex-col gap-3 sm:flex-row sm:rounded-full sm:bg-white/10 sm:p-1.5 sm:ring-1 sm:ring-white/20 sm:backdrop-blur-md md:mt-10"
-              role="group"
-              aria-label="Join the Voya waitlist"
-            >
-              <label htmlFor="waitlist-email" className="sr-only">
-                Email address
-              </label>
-              <input
-                id="waitlist-email"
-                name="email"
-                type="email"
-                inputMode="email"
-                autoComplete="email"
-                placeholder="Enter your email"
-                className="font-season-sans min-h-12 min-w-0 flex-1 rounded-full bg-white/10 px-5 text-base text-white outline-none ring-1 ring-white/20 transition placeholder:text-white/55 focus:bg-white/15 focus:ring-2 focus:ring-white/70 sm:bg-transparent sm:ring-0 sm:focus:bg-transparent sm:focus:ring-0"
-              />
-              <button
-                type="button"
-                className="font-season-sans min-h-12 shrink-0 rounded-full bg-burnt-orange px-7 text-base font-semibold text-white transition-colors hover:bg-burnt-orange/90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-black/50"
-              >
-                Join the waitlist
-              </button>
-            </div>
+            <WaitlistForm />
           </div>
         </section>
 
