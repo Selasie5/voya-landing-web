@@ -59,7 +59,7 @@ export function WaitlistForm() {
           disabled={isSubmitting}
           aria-invalid={emailError ? true : undefined}
           aria-describedby={emailError ? "waitlist-email-error" : undefined}
-          className="font-season-sans min-h-12 min-w-0 flex-1 rounded-full bg-white/10 px-5 text-base text-white outline-none ring-1 ring-white/20 transition-colors placeholder:text-white/55 focus:bg-white/15 focus:ring-2 focus:ring-white/70 disabled:cursor-wait disabled:opacity-70 sm:bg-transparent sm:ring-0 sm:focus:bg-transparent sm:focus:ring-0"
+          className="font-season-mix min-h-12 min-w-0 flex-1 rounded-full bg-white/10 px-5 text-base text-white outline-none ring-1 ring-white/20 transition-colors placeholder:text-white/55 focus:bg-white/15 focus:ring-2 focus:ring-white/70 disabled:cursor-wait disabled:opacity-70 sm:bg-transparent sm:ring-0 sm:focus:bg-transparent sm:focus:ring-0"
         />
         <button
           type="submit"

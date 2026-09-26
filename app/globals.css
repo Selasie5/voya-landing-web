@@ -11,7 +11,16 @@
   font-variation-settings: "SERF" 0;
 }
 
-.font-season-mix {
+.font-season-mix,
+.font-season-mix::placeholder,
+input.font-season-mix::placeholder,
+textarea.font-season-mix::placeholder {
+  font-family: var(--font-season), sans-serif;
+  font-variation-settings: "SERF" 50;
+}
+
+input::placeholder,
+textarea::placeholder {
   font-family: var(--font-season), sans-serif;
   font-variation-settings: "SERF" 50;
 }
