@@ -1,28 +1,19 @@
 @import "tailwindcss";
 
 @theme inline {
-  --font-sans: var(--font-season);
+  --font-sans: var(--font-tomato-grotesk);
   --color-burnt-orange: #E85412;
   --color-loader-peach: #FFA85C;
 }
 
-.font-season-sans {
-  font-family: var(--font-season), sans-serif;
-  font-variation-settings: "SERF" 0;
-}
-
-.font-season-mix,
-.font-season-mix::placeholder,
-input.font-season-mix::placeholder,
-textarea.font-season-mix::placeholder {
-  font-family: var(--font-season), sans-serif;
-  font-variation-settings: "SERF" 50;
-}
-
+body,
+button,
+input,
+select,
+textarea,
 input::placeholder,
 textarea::placeholder {
-  font-family: var(--font-season), sans-serif;
-  font-variation-settings: "SERF" 50;
+  font-family: var(--font-tomato-grotesk), sans-serif;
 }
 
 .mesh-gradient {

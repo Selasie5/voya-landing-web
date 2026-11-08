@@ -31,7 +31,7 @@ export function WaitlistForm() {
           weight="fill"
           aria-hidden="true"
         />
-        <p className="font-season-sans text-sm leading-relaxed sm:text-base">
+        <p className="font-sans text-sm leading-relaxed sm:text-base">
           You&apos;re on the waitlist. Check your inbox for confirmation.
         </p>
       </div>
@@ -59,12 +59,12 @@ export function WaitlistForm() {
           disabled={isSubmitting}
           aria-invalid={emailError ? true : undefined}
           aria-describedby={emailError ? "waitlist-email-error" : undefined}
-          className="font-season-mix min-h-12 min-w-0 flex-1 rounded-full bg-white/10 px-5 text-base text-white outline-none ring-1 ring-white/20 transition-colors placeholder:text-white/55 focus:bg-white/15 focus:ring-2 focus:ring-white/70 disabled:cursor-wait disabled:opacity-70 sm:bg-transparent sm:ring-0 sm:focus:bg-transparent sm:focus:ring-0"
+          className="font-sans min-h-12 min-w-0 flex-1 rounded-full bg-white/10 px-5 text-base text-white outline-none ring-1 ring-white/20 transition-colors placeholder:text-white/55 focus:bg-white/15 focus:ring-2 focus:ring-white/70 disabled:cursor-wait disabled:opacity-70 sm:bg-transparent sm:ring-0 sm:focus:bg-transparent sm:focus:ring-0"
         />
         <button
           type="submit"
           disabled={isSubmitting}
-          className="font-season-sans min-h-12 shrink-0 rounded-full bg-burnt-orange px-7 text-base font-semibold text-white transition-colors hover:bg-burnt-orange/90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-black/50 disabled:cursor-wait disabled:opacity-70"
+          className="font-sans min-h-12 shrink-0 rounded-full bg-burnt-orange px-7 text-base font-semibold text-white transition-colors hover:bg-burnt-orange/90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-black/50 disabled:cursor-wait disabled:opacity-70"
         >
           {isSubmitting ? "Joining..." : "Join the waitlist"}
         </button>
@@ -73,7 +73,7 @@ export function WaitlistForm() {
       {emailError && (
         <p
           id="waitlist-email-error"
-          className="font-season-sans mt-2 px-2 text-sm text-orange-200"
+          className="font-sans mt-2 px-2 text-sm text-orange-200"
           role="alert"
         >
           {emailError}

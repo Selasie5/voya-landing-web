@@ -88,7 +88,7 @@ export function LoadingScreen() {
 
         <span className="relative z-0 -ml-9 overflow-hidden pl-11">
           <motion.span
-            className="font-season-mix block text-5xl font-medium tracking-[-0.04em]"
+            className="font-sans block text-5xl font-medium tracking-[-0.04em]"
             initial={shouldReduceMotion ? false : { x: "-110%", opacity: 0 }}
             animate={{ x: 0, opacity: 1 }}
             transition={{

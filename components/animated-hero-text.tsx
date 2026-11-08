@@ -40,14 +40,14 @@ export function AnimatedHeroText() {
     >
       <motion.h1
         variants={textVariants}
-        className="font-season-mix max-w-4xl text-balance text-3xl font-medium leading-[1.05] tracking-[-0.035em] text-white sm:text-4xl md:text-5xl lg:text-6xl"
+        className="font-sans max-w-4xl text-balance text-3xl font-medium leading-[1.05] tracking-[-0.035em] text-white sm:text-4xl md:text-5xl lg:text-6xl"
       >
         Adventure begins with a plan and people worth traveling with
       </motion.h1>
 
       <motion.p
         variants={textVariants}
-        className="font-season-sans mt-5 max-w-2xl text-pretty text-sm leading-relaxed text-white/80 sm:text-base md:mt-6"
+        className="font-sans mt-5 max-w-2xl text-pretty text-sm leading-relaxed text-white/80 sm:text-base md:mt-6"
       >
         From daydream to departure, Voya builds the itinerary, works out the
         budget, and makes splitting the cost painless
